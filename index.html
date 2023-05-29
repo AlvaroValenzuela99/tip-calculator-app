@@ -6,39 +6,72 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
-  <title>Frontend Mentor | Tip calculator app</title>
+  <link rel="preload" href="styles/normalize.css" as="style">
+  <link rel="stylesheet" href="styles/normalize.css">
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="preload" href="styles/style.css" as="style">
+  <link rel="stylesheet" href="styles/style.css">
+  <title>Frontend Mentor | Tip calculator app</title>
 </head>
 <body>
 
-  Bill
+  <main>
+    <div class="container">
 
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
+      <div class="form-container">
+        <form>
+          <div class="bill-container">
+            <label for="bill">Bill</label>
+            <input type="number" id="bill">
+          </div>
+          
+          <div class="select-tip-container">
+            <label>Select Tip %</label>
+            <div class="tip">
+              <div class="5">5%</div>
+              <div class="10">10%</div>
+              <div class="15">15%</div>
+              <div class="25">25%</div>
+              <div class="50">50%</div>
+              <div class="custom">Custom</div>
+            </div>
+          </div>
+          
+          <div class="people-container">
+            <label for="people">Number of People</label>
+            <input type="number" id="people">
+          </div>
+        </form>
+        
+      </div>
 
-  Number of People
+      <div class="result-container">
+        <div class="tip-result">
+          <div class="tip-result-text">
+            <p>Tip Amount / person</p>
+          </div>
 
-  Tip Amount
-  / person
+          <div class="tip-result-quantity">
+            <p>$0.00</p>
+          </div>
+        </div>
 
-  Total
-  / person
+        <div class="total-result">
+          <div class="total-result-text">
+            <p>Total / person</p>
+          </div>
 
-  Reset
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+          <div class="total-result-quantity">
+            <p>$0.00</p>
+          </div>
+        </div>
+
+        <button class="reset-btn">Reset</button>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="app.js"></script>
 </body>
 </html>
