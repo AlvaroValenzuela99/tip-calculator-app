@@ -70,7 +70,6 @@ form{
 .bill-container{
     display: flex;
     flex-direction: column;
-    gap: 5px;
 }
 
 .bill-container input{
@@ -78,13 +77,101 @@ form{
     background-repeat: no-repeat;
     background-position: 4px center;
     background-size: 12px;
+    margin-top: 10px;
+    text-align: right;
+    padding: 25px;
+    border-radius: 5px;
 }
 
+.tip{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.tip div{
+    color: var(--white);
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+    background-color: var(--veryDarkCyan);
+    border-radius: 5px;
+}
+
+.tip div:last-of-type{
+    background-color: var(--veryLightGrayishCyan);
+}
+
+.custom:hover{
+    border: 2px solid var(--strongCyan);
+}
+
+#custom{
+    width: 100%;
+    outline: none;
+    text-align: right;
+}
+
+#custom::placeholder{
+    font-size: 30px;
+}
+
+.people-container input{
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    background-image: url('../images/icon-person.svg');
+    background-repeat: no-repeat;
+    background-position: 4px center;
+    background-size: 12px;
+    text-align: right;
+    padding: 25px;
+    border-radius: 5px;
+}
 /* Result container (right) */
 
 .result-container{
     background-color: var(--veryDarkCyan);
     width: 50%;
     margin: 40px;
+    padding: 30px;
     border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
+
+.tip-result, .total-result{
+    color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tip-result-text span, .total-result-text span{
+    display: block;
+    font-size: 18px;
+    margin-top: 5px;
+    color: var(--grayishCyan);
+}
+
+.tip-result-quantity p, .total-result-quantity p{
+    font-size: 40px;
+    color: var(--strongCyan);
+    margin: 0;
+}
+
+.reset-btn{
+    background-color: var(--strongCyan);
+    border: none;
+    padding: 15px;
+    text-transform: uppercase;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* Estilos DOM */
